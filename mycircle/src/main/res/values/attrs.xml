@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HLLTextView">
+        <!--声明MyTextView需要使用系统定义过的text属性,注意前面需要加上android命名-->
+        <attr name="android:text" />
+        <attr name="mTextColor" format="color" />
+        <attr name="mTextSize" format="dimension" />
+        <attr name="HLL" format="reference" />
+    </declare-styleable>
+</resources>

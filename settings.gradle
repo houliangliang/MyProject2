@@ -1,1 +1,1 @@
-include ':app', ':myapplication', ':myyuan', ':myview'
+include ':app', ':myapplication', ':myyuan', ':myview', ':mycircle', ':myjindutiao', ':myrecl', ':myokhttp'
