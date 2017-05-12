@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/list_item"
+        android:orderInCategory="100"
+        android:title="列表"
+        app:showAsAction="never"
+        >
+        <menu>
+        <item
+            android:id="@+id/list_normal"
+            android:orderInCategory="100"
+            android:title="标准"
+            app:showAsAction="never"></item>
+        <item
+            android:id="@+id/chuizhi"
+            android:orderInCategory="100"
+            android:title="垂直"
+            app:showAsAction="never"></item>
+        <item
+            android:id="@+id/shuiping"
+            android:orderInCategory="100"
+            android:title="水平"
+            app:showAsAction="never"></item>
+        <item
+            android:id="@+id/fanshuiping"
+            android:orderInCategory="100"
+            android:title="反向水平"
+            app:showAsAction="never"></item>
+        <item
+            android:id="@+id/fanchuizhi"
+            android:orderInCategory="100"
+            android:title="反相垂直"
+            app:showAsAction="never"></item>
+
+        </menu>
+
+
+    </item>
+</menu>

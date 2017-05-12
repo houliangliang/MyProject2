@@ -1,1 +1,1 @@
-include ':app', ':myapplication', ':myyuan', ':myview', ':mycircle', ':myjindutiao', ':myrecl', ':myokhttp'
+include ':app', ':myapplication', ':myyuan', ':myview', ':mycircle', ':myjindutiao', ':myrecl', ':myokhttp', ':mycheckboxrecyclerview', ':mycheckboxrecyclerview2'

@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/MyProject2.iml" filepath="$PROJECT_DIR$/MyProject2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/myapplication/myapplication.iml" filepath="$PROJECT_DIR$/myapplication/myapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mycheckboxrecyclerview/mycheckboxrecyclerview.iml" filepath="$PROJECT_DIR$/mycheckboxrecyclerview/mycheckboxrecyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mycheckboxrecyclerview2/mycheckboxrecyclerview2.iml" filepath="$PROJECT_DIR$/mycheckboxrecyclerview2/mycheckboxrecyclerview2.iml" />
       <module fileurl="file://$PROJECT_DIR$/mycircle/mycircle.iml" filepath="$PROJECT_DIR$/mycircle/mycircle.iml" />
       <module fileurl="file://$PROJECT_DIR$/myjindutiao/myjindutiao.iml" filepath="$PROJECT_DIR$/myjindutiao/myjindutiao.iml" />
       <module fileurl="file://$PROJECT_DIR$/myokhttp/myokhttp.iml" filepath="$PROJECT_DIR$/myokhttp/myokhttp.iml" />

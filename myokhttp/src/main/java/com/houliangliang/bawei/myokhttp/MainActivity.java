@@ -9,12 +9,14 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.util.List;
 
+import Utils.OkHttpManagerHLL;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
@@ -75,12 +77,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.get:
-                try {
-                    okhttpget();
-                } catch (IOException e) {
+//                try {
+//                    okhttpget();
+//                } catch (IOException e) {
+//
+//
+//                }
 
+                OkHttpManagerHLL.getAsync(URLUtils.url3, new OkHttpManagerHLL.DataCallBack() {
+                    @Override
+                    public void requestFailure(Request request, IOException e) {
 
-                }
+                    }
+
+                    @Override
+                    public void requestSuccess(String requset) {
+                        Toast.makeText(MainActivity.this, requset, Toast.LENGTH_SHORT).show();
+
+                    }
+                });
                 break;
             case R.id.getAsyn:
                 getAsyn();
@@ -101,10 +116,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 super.run();
                 Request.Builder builder = new Request.Builder()
-                        .url(URLUtils.url);
+                        .url(URLUtils.url3);
                 builder.method("GET", null);
                 Request build = builder.build();
-                Call call = mBuild.newCall(build);
+                Call call = mclient.newCall(build);
                 Response execute = null;
                 try {
                     execute = call.execute();
@@ -122,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void getAsyn() {
         final Request.Builder get = new Request.Builder().method("GET", null).url(URLUtils.url);
         Request build = get.build();
-        Call call = mBuild.newCall(build);
+        Call call = mclient.newCall(build);
         call.enqueue(new Callback() {
 
             private List<DataBean.ResultBean.DateBean> mDate;
@@ -156,16 +171,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public void post(){
-        FormBody build1 = new FormBody.Builder().add("page", "1")
-                .add("code", "news")
-                .add("pageSize", "20")
-                .add("parentid", "0")
-                .add("type", "1")
+        FormBody build1 = new FormBody.Builder()
+//                .add("page", "1")
+//                .add("code", "news")
+//                .add("pageSize", "20")
+//                .add("parentid", "0")
+//                .add("type", "1")
                 .build();
 
-        Request.Builder post = new Request.Builder().method("POST", build1).url(URLUtils.url2);
+        Request.Builder post = new Request.Builder().method("POST", build1).url(URLUtils.url3);
         Request build = post.build();
-        Call call = mBuild.newCall(build);
+        Call call = mclient.newCall(build);
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -175,7 +191,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String string = response.body().string();
+                String string2 = response.body().toString();
                 Log.d("88888888888",string);
+                Log.d("88888888888",string2);
             }
         });
     }
